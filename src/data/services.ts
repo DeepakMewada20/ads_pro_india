@@ -1,1 +1,95 @@
-export const servicesData = {}
+import type { Service } from "@/types/service"
+
+export const servicesData: Service[] = [
+  {
+    id: "meta-ads",
+    title: "Meta Ads",
+    description:
+      "Facebook & Instagram ad campaigns engineered for conversions. From prospecting to retargeting, we build full-funnel systems that scale.",
+    icon: { name: "Facebook" },
+    features: [
+      "Audience research & lookalike building",
+      "Conversion-optimized creative strategy",
+      "A/B testing at scale",
+      "Daily bid & budget management",
+    ],
+  },
+  {
+    id: "google-ads",
+    title: "Google Ads",
+    description:
+      "Search, Shopping, Display & YouTube campaigns that capture intent and drive qualified leads at the lowest possible CPA.",
+    icon: { name: "Search" },
+    features: [
+      "High-intent keyword strategy",
+      "Shopping feed optimization",
+      "Landing page conversion audits",
+      "Negative keyword & spend hygiene",
+    ],
+  },
+  {
+    id: "funnels",
+    title: "Funnel Building",
+    description:
+      "High-converting landing pages and multi-step funnels designed to turn cold traffic into paying customers on autopilot.",
+    icon: { name: "Layers" },
+    features: [
+      "Lead capture & nurture sequences",
+      "A/B tested landing page variants",
+      "WhatsApp & email integration",
+      "Retargeting pixel infrastructure",
+    ],
+  },
+  {
+    id: "creative",
+    title: "Creative & Copy",
+    description:
+      "Scroll-stopping ad creatives, video scripts, and copy that speaks directly to your ideal customer and drives action.",
+    icon: { name: "PenTool" },
+    features: [
+      "Ad creative design & video editing",
+      "Persuasive copywriting frameworks",
+      "UGC-style content production",
+      "Creative performance analysis",
+    ],
+  },
+  {
+    id: "web-dev",
+    title: "Website Development",
+    description:
+      "Fast, conversion-optimized websites built on modern stacks. We design for speed, clarity, and maximum lead generation.",
+    icon: { name: "Globe" },
+    features: [
+      "Next.js & Tailwind development",
+      "SEO-optimized structure",
+      "Mobile-first responsive design",
+      "Sub-2s load time guarantee",
+    ],
+  },
+  {
+    id: "lead-gen",
+    title: "Lead Generation",
+    description:
+      "End-to-end lead generation systems combining paid ads, organic content, and automated follow-up to fill your pipeline.",
+    icon: { name: "Mail" },
+    features: [
+      "Multi-channel lead sourcing",
+      "Automated lead nurturing flows",
+      "CRM & tracking setup",
+      "Lead quality scoring",
+    ],
+  },
+  {
+    id: "consulting",
+    title: "Ad Consulting",
+    description:
+      "For businesses with in-house teams who need expert guidance. Strategy audits, team training, and growth roadmapping.",
+    icon: { name: "Lightbulb" },
+    features: [
+      "Full account audit & gap analysis",
+      "Scalable growth roadmap",
+      "Team training & SOP creation",
+      "Monthly strategy reviews",
+    ],
+  },
+]

@@ -1,9 +1,21 @@
+"use client"
+
+import { useTheme as useNextTheme } from "next-themes"
+import { useCallback } from "react"
+
 export function useTheme() {
-  // TODO: Implement theme convenience wrapper around next-themes
+  const { theme, setTheme, resolvedTheme } = useNextTheme()
+
+  const isDark = resolvedTheme === "dark"
+
+  const toggleTheme = useCallback(() => {
+    setTheme(isDark ? "light" : "dark")
+  }, [isDark, setTheme])
+
   return {
-    theme: "light",
-    setTheme: (_theme: string) => {},
-    toggleTheme: () => {},
-    isDark: false,
+    theme: theme ?? "light",
+    setTheme,
+    toggleTheme,
+    isDark,
   }
 }

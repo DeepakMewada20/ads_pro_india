@@ -1,1 +1,72 @@
-export const pricingData = {}
+import type { PricingPlan } from "@/types/pricing"
+
+export const pricingPlans: PricingPlan[] = [
+  {
+    id: "starter",
+    name: "Starter",
+    description: "Perfect for local businesses and startups ready to test paid ads.",
+    price: 14999,
+    currency: "₹",
+    interval: "monthly",
+    isPopular: false,
+    ctaText: "Get Started",
+    ctaHref: "https://wa.me/916268665115",
+    features: [
+      { text: "Meta Ads OR Google Ads (1 platform)", included: true },
+      { text: "Up to ₹50K ad spend management", included: true },
+      { text: "2 ad creatives / month", included: true },
+      { text: "Bi-weekly performance report", included: true },
+      { text: "WhatsApp support (48h response)", included: true },
+      { text: "Landing page optimization", included: false },
+      { text: "Funnel building", included: false },
+      { text: "Dedicated account manager", included: false },
+    ],
+  },
+  {
+    id: "growth",
+    name: "Growth",
+    description: "For growing businesses ready to scale across multiple channels.",
+    price: 29999,
+    currency: "₹",
+    interval: "monthly",
+    isPopular: true,
+    ctaText: "Most Popular",
+    ctaHref: "https://wa.me/916268665115",
+    features: [
+      { text: "Meta Ads + Google Ads (both platforms)", included: true },
+      { text: "Up to ₹2L ad spend management", included: true },
+      { text: "6 ad creatives / month", included: true },
+      { text: "Weekly performance report", included: true },
+      { text: "WhatsApp priority support (12h response)", included: true },
+      { text: "Landing page optimization", included: true },
+      { text: "Basic funnel building", included: true },
+      { text: "Dedicated account manager", included: false },
+    ],
+  },
+  {
+    id: "enterprise",
+    name: "Enterprise",
+    description: "Full-stack growth partnership for established brands with aggressive targets.",
+    price: 59999,
+    currency: "₹",
+    interval: "monthly",
+    isPopular: false,
+    ctaText: "Talk to Gautam",
+    ctaHref: "https://wa.me/916268665115",
+    features: [
+      { text: "Meta + Google + WhatsApp (all platforms)", included: true },
+      { text: "Unlimited ad spend management", included: true },
+      { text: "Unlimited ad creatives", included: true },
+      { text: "Real-time dashboard access", included: true },
+      { text: "Dedicated account manager", included: true },
+      { text: "Full funnel & website builds", included: true },
+      { text: "Weekly strategy calls", included: true },
+      { text: "White-label reporting", included: true },
+    ],
+  },
+]
+
+export const pricingUrgency = {
+  strip: "🚀 Limited spots available — Gautam personally handles all Enterprise accounts.",
+  note: "All plans include a free 30-minute strategy call. No commitment, no credit card.",
+}

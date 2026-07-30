@@ -1,0 +1,18 @@
+export function FAQHeader() {
+  return (
+    <div className="mb-14 text-center">
+      <div className="mb-4 inline-flex justify-center">
+        <span className="inline-flex items-center rounded-full bg-primary-bg px-3 py-1 font-mono text-[0.62rem] font-medium uppercase tracking-[0.08em] text-primary">
+          Got Questions?
+        </span>
+      </div>
+      <h2 className="font-serif text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em]">
+        Frequently Asked{" "}
+        <em className="not-italic text-primary">Questions</em>
+      </h2>
+      <p className="mx-auto mt-4 max-w-[500px] text-sm leading-relaxed text-muted">
+        Everything you need to know about working with Ads Pro India. Still have questions? Message us on WhatsApp.
+      </p>
+    </div>
+  )
+}
