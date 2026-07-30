@@ -6,19 +6,21 @@ interface ContactFormFieldProps {
   children: ReactNode
   error?: string
   required?: boolean
+  htmlFor?: string
+  errorId?: string
   className?: string
 }
 
-export function ContactFormField({ label, children, error, required, className }: ContactFormFieldProps) {
+export function ContactFormField({ label, children, error, required, htmlFor, errorId, className }: ContactFormFieldProps) {
   return (
     <div className={cn("flex flex-col gap-1.5", className)}>
-      <label className="font-sans text-[0.8rem] font-semibold text-ink">
+      <label htmlFor={htmlFor} className="font-sans text-[0.8rem] font-semibold text-ink">
         {label}
         {required && <span className="ml-0.5 text-danger" aria-hidden="true">*</span>}
       </label>
       {children}
       {error && (
-        <p className="font-sans text-[0.75rem] text-danger" role="alert">
+        <p id={errorId} className="font-sans text-[0.75rem] text-danger" role="alert">
           {error}
         </p>
       )}

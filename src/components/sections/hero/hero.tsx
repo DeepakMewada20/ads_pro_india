@@ -1,5 +1,3 @@
-"use client"
-
 import { HeroBackground } from "./hero-background"
 import { HeroBadge } from "./hero-badge"
 import { HeroHeading } from "./hero-heading"

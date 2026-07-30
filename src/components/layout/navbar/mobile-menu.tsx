@@ -27,7 +27,7 @@ export function MobileMenu({ isScrolled }: MobileMenuProps) {
           <span className={`h-[2px] w-[22px] rounded-full transition-all duration-300 ${isScrolled ? "bg-ink" : "bg-white"}`} />
         </button>
       </SheetTrigger>
-      <SheetContent side="right" className="flex flex-col bg-white/98 backdrop-blur-2xl">
+      <SheetContent side="right" className="flex flex-col bg-white/98 backdrop-blur-2xl" aria-label="Navigation menu">
         <nav aria-label="Mobile navigation" className="mt-16 flex flex-1 flex-col items-center justify-center gap-10">
           {navigationData.map((link, i) => (
             <motion.a

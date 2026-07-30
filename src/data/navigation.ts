@@ -7,7 +7,6 @@ export const navigationData: NavLink[] = [
   { label: "Services", href: "#services" },
   { label: "Process", href: "#process" },
   { label: "Pricing", href: "#pricing" },
-  { label: "Why Us", href: "#compare" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
 ]

@@ -1,5 +1,3 @@
-"use client"
-
 import { SectionContainer } from "@/components/common/section-container"
 import { AboutBackground } from "./about-background"
 import { AboutContent } from "./about-content"

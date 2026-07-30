@@ -12,7 +12,7 @@ export default function MarketingLayout({
   return (
     <ThemeProvider>
       <Navbar />
-      <main className="flex flex-1 flex-col pt-[70px]">{children}</main>
+      <main id="main-content" className="flex flex-1 flex-col pt-[70px]">{children}</main>
       <Footer />
       <FloatingComponents />
       <ToasterProvider />

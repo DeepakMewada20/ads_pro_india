@@ -13,9 +13,9 @@ export function PricingFeatures({ features }: PricingFeaturesProps) {
           {feature.included ? (
             <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-success" />
           ) : (
-            <X className="mt-0.5 h-4 w-4 flex-shrink-0 text-muted/40" />
+            <X className="mt-0.5 h-4 w-4 flex-shrink-0 text-muted/60" />
           )}
-          <span className={feature.included ? "text-ink" : "text-muted/50"}>
+          <span className={feature.included ? "text-ink" : "text-muted/70"}>
             {feature.text}
           </span>
         </li>

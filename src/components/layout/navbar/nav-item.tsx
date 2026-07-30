@@ -18,7 +18,7 @@ export const NavItem = memo(function NavItem({ label, href, isScrolled, onClick 
         href={href}
         onClick={onClick}
         className={cn(
-          "relative px-1 py-2 font-sans text-[0.84rem] font-medium no-underline transition-colors duration-200",
+          "relative px-1 py-2 font-sans text-[0.84rem] font-medium no-underline transition-colors duration-200 focus-visible:outline-none focus-visible:rounded focus-visible:text-primary",
           isScrolled
             ? "text-muted hover:text-ink"
             : "text-white/65 hover:text-white",

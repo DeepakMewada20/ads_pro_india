@@ -39,7 +39,9 @@ export function HeroLeadForm() {
               type={field.type}
               placeholder={field.placeholder}
               required={field.required}
-              className="w-full rounded-lg border border-white/15 bg-white/10 px-4 py-[0.72rem] font-sans text-[0.84rem] text-white placeholder-white/30 outline-none transition-colors focus:border-primary/60 focus:bg-white/15"
+              aria-label={field.placeholder}
+              aria-required={field.required}
+              className="w-full rounded-lg border border-white/15 bg-white/10 px-4 py-[0.72rem] font-sans text-[0.84rem] text-white placeholder-white/30 outline-none transition-colors focus:border-primary/60 focus:bg-white/15 focus-visible:ring-2 focus-visible:ring-primary/50"
             />
           ))}
         </div>
@@ -48,11 +50,13 @@ export function HeroLeadForm() {
             name="business"
             type="text"
             placeholder="Business Type"
-            className="w-full rounded-lg border border-white/15 bg-white/10 px-4 py-[0.72rem] font-sans text-[0.84rem] text-white placeholder-white/30 outline-none transition-colors focus:border-primary/60 focus:bg-white/15"
+            aria-label="Business Type"
+            className="w-full rounded-lg border border-white/15 bg-white/10 px-4 py-[0.72rem] font-sans text-[0.84rem] text-white placeholder-white/30 outline-none transition-colors focus:border-primary/60 focus:bg-white/15 focus-visible:ring-2 focus-visible:ring-primary/50"
           />
           <select
             name="budget"
-            className="w-full rounded-lg border border-white/15 bg-white/10 px-4 py-[0.72rem] font-sans text-[0.84rem] text-white/60 outline-none transition-colors focus:border-primary/60 focus:bg-white/15"
+            aria-label="Monthly Ad Budget"
+            className="w-full rounded-lg border border-white/15 bg-white/10 px-4 py-[0.72rem] font-sans text-[0.84rem] text-white/60 outline-none transition-colors focus:border-primary/60 focus:bg-white/15 focus-visible:ring-2 focus-visible:ring-primary/50"
           >
             {heroFormFields[3].options?.map((opt) => (
               <option key={opt} value={opt} className="bg-[#0a0f1e] text-white">
@@ -63,7 +67,7 @@ export function HeroLeadForm() {
         </div>
         <button
           type="submit"
-          className="w-full rounded-lg bg-primary px-4 py-[0.82rem] font-sans text-[0.88rem] font-bold text-white shadow-[0_6px_24px_rgba(26,111,255,0.4)] transition-all hover:-translate-y-px hover:bg-primary-dark hover:shadow-[0_10px_32px_rgba(26,111,255,0.5)]"
+          className="w-full rounded-lg bg-primary px-4 py-[0.82rem] font-sans text-[0.88rem] font-bold text-white shadow-[0_6px_24px_rgba(26,111,255,0.4)] transition-all hover:-translate-y-px hover:bg-primary-dark hover:shadow-[0_10px_32px_rgba(26,111,255,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
         >
           Send My Free Growth Plan on WhatsApp
         </button>

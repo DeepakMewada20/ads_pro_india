@@ -19,7 +19,7 @@ export function WhatsAppButton() {
         whileTap={{ scale: 0.95 }}
       >
         <MessageCircle className="h-6 w-6" />
-        <span className="pointer-events-none absolute right-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-lg bg-ink px-3 py-1.5 font-sans text-xs font-medium text-white opacity-0 shadow-lg transition-all duration-200 group-hover:opacity-100">
+        <span className="pointer-events-none absolute right-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-lg bg-ink px-3 py-1.5 font-sans text-xs font-medium text-white opacity-0 shadow-lg transition-all duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
           WhatsApp!
         </span>
       </motion.a>

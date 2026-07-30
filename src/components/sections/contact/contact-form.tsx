@@ -22,6 +22,14 @@ const contactSchema = z.object({
   goal: z.string().optional(),
 })
 
+const FIELD_IDS = {
+  name: "f_name",
+  phone: "f_phone",
+  business: "f_biz",
+  budget: "f_budget",
+  goal: "f_goal",
+} as const
+
 export function ContactForm() {
   const {
     register,
@@ -59,36 +67,52 @@ export function ContactForm() {
       <GlassCard variant="light" hover="none" className="p-6 sm:p-8 lg:p-10">
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <div className="grid gap-5 sm:grid-cols-2">
-            <ContactFormField label="Your Name" error={errors.name?.message} required>
+            <ContactFormField
+              label="Your Name"
+              error={errors.name?.message}
+              required
+              htmlFor={FIELD_IDS.name}
+              errorId={`${FIELD_IDS.name}-error`}
+            >
               <Input
-                id="f_name"
+                id={FIELD_IDS.name}
                 placeholder="Rahul Sharma"
                 hasError={!!errors.name}
+                aria-required="true"
+                aria-describedby={errors.name ? `${FIELD_IDS.name}-error` : undefined}
                 {...register("name")}
               />
             </ContactFormField>
 
-            <ContactFormField label="WhatsApp Number" error={errors.phone?.message} required>
+            <ContactFormField
+              label="WhatsApp Number"
+              error={errors.phone?.message}
+              required
+              htmlFor={FIELD_IDS.phone}
+              errorId={`${FIELD_IDS.phone}-error`}
+            >
               <Input
-                id="f_phone"
+                id={FIELD_IDS.phone}
                 type="tel"
                 placeholder="+91 XXXXXXXXXX"
                 hasError={!!errors.phone}
+                aria-required="true"
+                aria-describedby={errors.phone ? `${FIELD_IDS.phone}-error` : undefined}
                 {...register("phone")}
               />
             </ContactFormField>
 
-            <ContactFormField label="Business Name">
+            <ContactFormField label="Business Name" htmlFor={FIELD_IDS.business}>
               <Input
-                id="f_biz"
+                id={FIELD_IDS.business}
                 placeholder="Your Business"
                 {...register("business")}
               />
             </ContactFormField>
 
-            <ContactFormField label="Monthly Ad Budget">
+            <ContactFormField label="Monthly Ad Budget" htmlFor={FIELD_IDS.budget}>
               <ContactFormSelect
-                id="f_budget"
+                id={FIELD_IDS.budget}
                 options={budgetOptions.map((o) => o.label)}
                 placeholder="Select Budget Range"
                 {...register("budget")}
@@ -96,9 +120,9 @@ export function ContactForm() {
             </ContactFormField>
           </div>
 
-          <ContactFormField label="Main Goal" className="mt-5">
+          <ContactFormField label="Main Goal" className="mt-5" htmlFor={FIELD_IDS.goal}>
             <Textarea
-              id="f_goal"
+              id={FIELD_IDS.goal}
               placeholder="Tell us what you want to achieve with paid ads..."
               rows={4}
               {...register("goal")}

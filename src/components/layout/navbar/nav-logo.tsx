@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { motion } from "framer-motion"
 
 interface NavLogoProps {
@@ -8,7 +9,7 @@ interface NavLogoProps {
 
 export function NavLogo({ isScrolled }: NavLogoProps) {
   return (
-    <a href="#" className="flex items-center gap-0 no-underline">
+    <Link href="/" className="flex items-center gap-0 no-underline">
       <motion.span
         className="bg-gradient-to-r from-ink via-ink via-[40%] via-primary via-[50%] via-ink via-[60%] to-ink bg-[length:200%_auto] bg-clip-text font-sans text-[1.5rem] font-black tracking-[-0.04em] text-transparent"
         style={{
@@ -21,6 +22,6 @@ export function NavLogo({ isScrolled }: NavLogoProps) {
       >
         AdsProIndia
       </motion.span>
-    </a>
+    </Link>
   )
 }

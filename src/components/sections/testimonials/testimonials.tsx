@@ -1,5 +1,3 @@
-"use client"
-
 import { SectionContainer } from "@/components/common/section-container"
 import { MaxWidthContainer } from "@/components/common/max-width-container"
 import { TestimonialsHeader } from "./testimonials-header"
