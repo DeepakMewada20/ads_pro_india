@@ -8,14 +8,20 @@ import type { Service } from "@/types/service"
 
 interface ServiceCardProps {
   service: Service
+  index: number
 }
 
-export function ServiceCard({ service }: ServiceCardProps) {
+export function ServiceCard({ service, index }: ServiceCardProps) {
   return (
     <GlassCard variant="light" hover="lift" className="group flex h-full flex-col p-6">
       <div className="pointer-events-none absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r from-primary to-primary-light transition-all duration-500 group-hover:w-full" />
 
-      <ServiceIcon name={service.icon.name} />
+      <div className="mb-5 flex items-start justify-between">
+        <ServiceIcon name={service.icon.name} variant={service.variant} />
+        <span className="font-mono text-[0.7rem] font-medium tracking-[0.15em] text-muted/60">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      </div>
 
       <h3 className="font-serif text-[1.15rem] font-bold text-ink">{service.title}</h3>
 

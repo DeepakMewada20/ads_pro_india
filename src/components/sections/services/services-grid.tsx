@@ -15,7 +15,7 @@ export function ServicesGrid() {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: i * 0.08 }}
         >
-          <ServiceCard service={service} />
+          <ServiceCard service={service} index={i} />
         </motion.div>
       ))}
     </GridContainer>

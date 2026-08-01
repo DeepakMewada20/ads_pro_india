@@ -8,7 +8,7 @@ export function About() {
     <SectionContainer
       id="about"
       background="dark"
-      className="relative"
+      className="relative overflow-hidden"
     >
       <AboutBackground />
 

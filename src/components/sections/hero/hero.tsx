@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="relative z-10 bg-gradient-to-br from-[#060914] via-[#0a0f1e] to-[#0d1630] pb-16 pt-10 sm:pt-16"
+      className="relative z-10 overflow-hidden bg-gradient-to-br from-[#060914] via-[#0a0f1e] to-[#0d1630] pb-16 pt-10 sm:pt-16"
     >
       <HeroBackground />
 

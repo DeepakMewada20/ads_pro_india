@@ -6,7 +6,8 @@ export const servicesData: Service[] = [
     title: "Meta Ads",
     description:
       "Facebook & Instagram ad campaigns engineered for conversions. From prospecting to retargeting, we build full-funnel systems that scale.",
-    icon: { name: "Facebook" },
+    icon: { name: "ThumbsUp" },
+    variant: "gradient-orange",
     features: [
       "Audience research & lookalike building",
       "Conversion-optimized creative strategy",
@@ -20,6 +21,7 @@ export const servicesData: Service[] = [
     description:
       "Search, Shopping, Display & YouTube campaigns that capture intent and drive qualified leads at the lowest possible CPA.",
     icon: { name: "Search" },
+    variant: "gradient-blue",
     features: [
       "High-intent keyword strategy",
       "Shopping feed optimization",
@@ -33,6 +35,7 @@ export const servicesData: Service[] = [
     description:
       "High-converting landing pages and multi-step funnels designed to turn cold traffic into paying customers on autopilot.",
     icon: { name: "Layers" },
+    variant: "gradient-green",
     features: [
       "Lead capture & nurture sequences",
       "A/B tested landing page variants",
@@ -46,6 +49,7 @@ export const servicesData: Service[] = [
     description:
       "Scroll-stopping ad creatives, video scripts, and copy that speaks directly to your ideal customer and drives action.",
     icon: { name: "PenTool" },
+    variant: "gradient-purple",
     features: [
       "Ad creative design & video editing",
       "Persuasive copywriting frameworks",
@@ -59,6 +63,7 @@ export const servicesData: Service[] = [
     description:
       "Fast, conversion-optimized websites built on modern stacks. We design for speed, clarity, and maximum lead generation.",
     icon: { name: "Globe" },
+    variant: "gradient-blue",
     features: [
       "Next.js & Tailwind development",
       "SEO-optimized structure",
@@ -67,11 +72,40 @@ export const servicesData: Service[] = [
     ],
   },
   {
+    id: "landing-page",
+    title: "Landing Page Development",
+    description:
+      "High-converting landing pages purpose-built for paid traffic. Every section engineered to capture attention, build trust, and drive action.",
+    icon: { name: "MousePointerClick" },
+    variant: "gradient-purple",
+    features: [
+      "Conversion-focused page structure",
+      "A/B tested headline & offer variants",
+      "WhatsApp, form & payment integrations",
+      "Speed & mobile optimised builds",
+    ],
+  },
+  {
+    id: "app-dev",
+    title: "App Development",
+    description:
+      "iOS, Android & web apps built to scale. From MVP to full product, we ship fast, modern apps that align with your growth goals.",
+    icon: { name: "Smartphone" },
+    variant: "gradient-orange",
+    features: [
+      "Cross-platform iOS & Android apps",
+      "Fast MVP launches",
+      "API & backend integration",
+      "Analytics & push notification setup",
+    ],
+  },
+  {
     id: "lead-gen",
     title: "Lead Generation",
     description:
       "End-to-end lead generation systems combining paid ads, organic content, and automated follow-up to fill your pipeline.",
     icon: { name: "Mail" },
+    variant: "gradient-orange",
     features: [
       "Multi-channel lead sourcing",
       "Automated lead nurturing flows",
@@ -85,6 +119,7 @@ export const servicesData: Service[] = [
     description:
       "For businesses with in-house teams who need expert guidance. Strategy audits, team training, and growth roadmapping.",
     icon: { name: "Lightbulb" },
+    variant: "gradient-green",
     features: [
       "Full account audit & gap analysis",
       "Scalable growth roadmap",
