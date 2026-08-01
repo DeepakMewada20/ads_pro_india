@@ -6,7 +6,7 @@ export function FAQHeader() {
           Got Questions?
         </span>
       </div>
-      <h2 className="font-serif text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em]">
+      <h2 className="font-serif text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-ink">
         Frequently Asked{" "}
         <em className="not-italic text-primary">Questions</em>
       </h2>

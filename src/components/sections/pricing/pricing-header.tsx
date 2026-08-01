@@ -6,7 +6,7 @@ export function PricingHeader() {
           Simple Pricing
         </span>
       </div>
-      <h2 className="font-serif text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em]">
+      <h2 className="font-serif text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-ink">
         Choose the Plan That{" "}
         <em className="not-italic text-primary">Fits You</em>
       </h2>

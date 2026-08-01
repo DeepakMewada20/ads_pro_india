@@ -6,7 +6,7 @@ export function ProcessHeader() {
           How We Deliver
         </span>
       </div>
-      <h2 className="font-serif text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em]">
+      <h2 className="font-serif text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em] text-ink">
         From Audit to{" "}
         <em className="not-italic text-primary">Scale</em>
         <br />

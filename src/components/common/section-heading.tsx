@@ -6,10 +6,18 @@ interface SectionHeadingProps {
   title: ReactNode
   description?: string
   align?: "left" | "center"
+  tone?: "light" | "dark"
   className?: string
 }
 
-export function SectionHeading({ label, title, description, align = "left", className }: SectionHeadingProps) {
+export function SectionHeading({
+  label,
+  title,
+  description,
+  align = "left",
+  tone = "light",
+  className,
+}: SectionHeadingProps) {
   return (
     <div className={cn(align === "center" && "text-center", className)}>
       {label && (
@@ -18,11 +26,16 @@ export function SectionHeading({ label, title, description, align = "left", clas
           {label}
         </div>
       )}
-      <h2 className="font-serif text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em]">
+      <h2
+        className={cn(
+          "font-serif text-[clamp(2rem,4vw,3.2rem)] font-extrabold leading-[1.12] tracking-[-0.03em]",
+          tone === "light" ? "text-ink" : "text-white",
+        )}
+      >
         {title}
       </h2>
       {description && (
-        <p className="mt-4 max-w-[500px] text-sm leading-relaxed text-muted">
+        <p className={cn("mt-4 max-w-[500px] text-sm leading-relaxed", tone === "light" ? "text-muted" : "text-white/50")}>
           {description}
         </p>
       )}
