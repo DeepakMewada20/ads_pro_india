@@ -4,8 +4,9 @@ import { motion } from "framer-motion"
 import { SectionContainer } from "@/components/common/section-container"
 import { MaxWidthContainer } from "@/components/common/max-width-container"
 import { AnimatedButton } from "@/components/common/animated-button"
+import { WhatsAppIcon } from "@/components/common/whatsapp-icon"
 import { ctaContent } from "@/data/cta"
-import { Phone, MessageCircle } from "lucide-react"
+import { Phone } from "lucide-react"
 
 export function CTA() {
   return (
@@ -44,7 +45,7 @@ export function CTA() {
               {ctaContent.buttons.primary.label}
             </AnimatedButton>
             <AnimatedButton href={ctaContent.buttons.secondary.href} variant="whatsapp">
-              <MessageCircle className="h-4 w-4" />
+              <WhatsAppIcon className="h-4.5 w-4.5" fill="#ffffff" />
               {ctaContent.buttons.secondary.label}
             </AnimatedButton>
           </div>

@@ -4,28 +4,28 @@ export const processSteps: ProcessStep[] = [
   {
     id: "strategy",
     number: 1,
-    icon: "Search",
-    title: "Audit & Strategy",
+    icon: "Target",
+    title: "Plan Your Growth",
     description:
-      "We analyse your current ads, funnel, and competitors. Then we build a data-backed growth plan tailored to your business goals and budget.",
-    tag: "Free Audit",
+      "Book a free 30-min strategy call. We audit your current marketing, identify leaks, and build a custom growth blueprint for your business — no strings attached.",
+    tag: "Free Strategy Call",
   },
   {
     id: "execution",
     number: 2,
-    icon: "Zap",
-    title: "Execute & Optimize",
+    icon: "Rocket",
+    title: "We Launch & Optimise",
     description:
-      "Our team launches campaigns, tests creatives, and optimises in real-time. We iterate fast to find winning combinations that drive ROI.",
-    tag: "Ongoing",
+      "We build your campaigns, creatives, and funnels — then launch within days, not weeks. Every rupee is tracked, tested, and optimised in real time.",
+    tag: "Launch in 3–5 Days",
   },
   {
     id: "scale",
     number: 3,
     icon: "TrendingUp",
-    title: "Scale & Report",
+    title: "Count Your Profits",
     description:
-      "Once we find a profitable system, we scale spend intelligently while you get transparent weekly reports with actionable insights.",
-    tag: "Results-Driven",
+      "Watch your leads, sales and revenue grow week by week. You get full transparent reporting — so you always know exactly what your money is doing.",
+    tag: "Real ROI. Always.",
   },
 ]

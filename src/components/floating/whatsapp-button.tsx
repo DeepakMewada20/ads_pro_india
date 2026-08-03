@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { MessageCircle } from "lucide-react"
+import { WhatsAppIcon } from "@/components/common/whatsapp-icon"
 
 export function WhatsAppButton() {
   return (
@@ -18,7 +18,7 @@ export function WhatsAppButton() {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.95 }}
       >
-        <MessageCircle className="h-6 w-6" />
+        <WhatsAppIcon className="h-7 w-7" fill="#ffffff" />
         <span className="pointer-events-none absolute right-[calc(100%+12px)] top-1/2 -translate-y-1/2 whitespace-nowrap rounded-lg bg-ink px-3 py-1.5 font-sans text-xs font-medium text-white opacity-0 shadow-lg transition-all duration-200 group-hover:opacity-100 group-focus-visible:opacity-100">
           WhatsApp!
         </span>

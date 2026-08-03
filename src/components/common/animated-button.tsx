@@ -12,6 +12,7 @@ interface AnimatedButtonProps {
   className?: string
   onClick?: () => void
   target?: string
+  rel?: string
   type?: "button" | "submit"
   disabled?: boolean
 }
@@ -27,7 +28,7 @@ const variants = {
 }
 
 export const AnimatedButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, AnimatedButtonProps>(
-  function AnimatedButton({ children, href, variant = "primary", className, onClick, target, type, disabled }, ref) {
+  function AnimatedButton({ children, href, variant = "primary", className, onClick, target, rel, type, disabled }, ref) {
     const baseClassName = cn(
       "inline-flex items-center gap-2 rounded-md px-8 py-3.5 font-sans text-[0.9rem] font-semibold no-underline transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
       variants[variant],
@@ -46,6 +47,7 @@ export const AnimatedButton = forwardRef<HTMLAnchorElement | HTMLButtonElement, 
           ref={ref as React.Ref<HTMLAnchorElement>}
           href={href}
           target={target}
+          rel={rel}
           className={baseClassName}
           onClick={onClick}
           {...motionProps}

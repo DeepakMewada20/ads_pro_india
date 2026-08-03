@@ -31,8 +31,10 @@ export function Navbar() {
         className="mx-auto flex h-full max-w-[1200px] items-center justify-between"
       >
         <NavLogo isScrolled={isScrolled} />
-        <DesktopNavigation isScrolled={isScrolled} />
-        <div className="hidden items-center lg:flex">
+
+        {/* Navigation links & CTA button grouped together on the right side */}
+        <div className="hidden items-center gap-8 lg:flex">
+          <DesktopNavigation isScrolled={isScrolled} />
           <AnimatedButton
             href={navbarConfig.cta.href}
             variant={isScrolled ? "primary" : "primary"}
@@ -41,6 +43,7 @@ export function Navbar() {
             {navbarConfig.cta.label}
           </AnimatedButton>
         </div>
+
         <MobileMenu isScrolled={isScrolled} />
       </nav>
     </header>

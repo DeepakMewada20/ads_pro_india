@@ -56,19 +56,35 @@ export const viewport: Viewport = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  name: SITE_NAME,
-  url: SITE_URL,
-  description: SITE_DESCRIPTION,
-  foundingDate: "2020",
-  founder: { "@type": "Person", name: "Gautam Mali" },
-  address: { "@type": "PostalAddress", addressLocality: "Indore", addressRegion: "MP", addressCountry: "IN" },
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+916268665115",
-    contactType: "sales",
-    availableLanguage: ["Hindi", "English"],
-  },
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      name: SITE_NAME,
+      url: SITE_URL,
+      logo: `${SITE_URL}/logo.png`,
+      description: SITE_DESCRIPTION,
+      foundingDate: "2020",
+      founder: { "@type": "Person", name: "Gautam Mali" },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Indore",
+        addressRegion: "Madhya Pradesh",
+        addressCountry: "IN",
+      },
+      contactPoint: {
+        "@type": "ContactPoint",
+        telephone: "+916268665115",
+        contactType: "sales",
+        availableLanguage: ["Hindi", "English"],
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "4.9",
+        reviewCount: "500",
+      },
+      priceRange: "₹₹",
+    },
+  ],
 }
 
 export default function RootLayout({

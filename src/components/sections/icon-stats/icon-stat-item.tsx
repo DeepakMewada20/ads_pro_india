@@ -24,7 +24,7 @@ export function IconStatItem({ stat, index }: IconStatItemProps) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="flex flex-col items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-7 text-center backdrop-blur-[12px] transition-colors duration-300 hover:border-primary/40 hover:bg-white/[0.06] sm:py-8"
     >

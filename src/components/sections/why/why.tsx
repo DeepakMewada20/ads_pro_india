@@ -24,7 +24,7 @@ export function Why() {
               variants={container}
               initial="hidden"
               whileInView="show"
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "0px" }}
               className="mt-10 flex flex-col gap-8"
             >
               {whyItems.map((item) => (

@@ -1,6 +1,5 @@
 "use client"
 
-import Image from "next/image"
 import { motion, useMotionValue, useSpring } from "framer-motion"
 import { FOUNDER } from "@/constants/site"
 
@@ -25,23 +24,14 @@ export function AboutImage() {
     <motion.div
       className="relative mx-auto max-w-[380px]"
       whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 0.8 }}
       onMouseMove={handleMouse}
       onMouseLeave={handleLeave}
     >
+      {/* Main Avatar Card */}
       <motion.div
-        className="absolute inset-[-12px] rounded-[30px] border-[2px] border-primary-light/30"
-        style={{
-          background: "radial-gradient(circle, rgba(26,111,255,0.06), transparent 70%)",
-          rotate: springX
-        }}
-        animate={{ rotate: [0, 5, -5, 0] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-      />
-
-      <motion.div
-        className="relative aspect-[4/5] overflow-hidden rounded-[24px] bg-gradient-to-br from-primary-bg to-primary/10 shadow-[0_20px_50px_rgba(26,111,255,0.15)]"
+        className="relative aspect-[4/5] overflow-hidden rounded-[24px] border border-white/10 shadow-[0_20px_50px_rgba(26,111,255,0.2)]"
         style={{
           rotateX: springY,
           rotateY: springX,
@@ -49,25 +39,28 @@ export function AboutImage() {
           perspective: 800,
         }}
       >
-        <Image
-          src="/images/gautam-mali-2.jpg"
-          alt={`${FOUNDER.name} - ${FOUNDER.role}`}
-          fill
-          className="object-cover object-center"
-        />
-        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent p-5 text-white backdrop-blur-[2px]">
-          <div className="font-serif text-[1.1rem] font-bold text-white">{FOUNDER.name}</div>
-          <div className="font-mono text-[0.68rem] uppercase tracking-[0.1em] text-primary-light font-semibold">
-            {FOUNDER.role}
+        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#0e172a] via-[#1e293b] to-[#0f172a] p-6 text-center">
+          <div>
+            <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-primary font-serif text-[2.2rem] font-extrabold text-white shadow-[0_12px_40px_rgba(26,111,255,0.4)] ring-4 ring-primary/20">
+              {FOUNDER.name.split(" ").map((n) => n[0]).join("")}
+            </div>
+            <div className="font-serif text-xl font-bold text-white">{FOUNDER.name}</div>
+            <div className="mt-1 font-mono text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-primary-light">
+              {FOUNDER.role}
+            </div>
+            <div className="mt-2 inline-block rounded-full bg-emerald-500/10 px-3 py-1 text-[0.68rem] font-medium text-emerald-400 border border-emerald-500/20">
+              Founder & Strategy Head
+            </div>
           </div>
         </div>
       </motion.div>
 
+      {/* Floating Rating Badge (Positioned Lower) */}
       <div
-        className="absolute -bottom-3 -right-3 z-10 animate-[float_4s_ease-in-out_infinite] rounded-xl border border-primary/30 bg-primary/95 px-4 py-3 text-white shadow-[0_8px_32px_rgba(26,111,255,0.3)] backdrop-blur-sm"
+        className="absolute -bottom-8 -right-2 z-10 animate-[float_4s_ease-in-out_infinite] rounded-xl border border-primary/40 bg-primary px-4.5 py-3 text-white shadow-[0_10px_35px_rgba(26,111,255,0.45)] backdrop-blur-sm"
       >
-        <div className="font-serif text-[1.3rem] font-extrabold leading-none">4.9/5</div>
-        <div className="font-mono text-[0.6rem] uppercase tracking-[0.06em] text-white/70">
+        <div className="font-serif text-[1.35rem] font-extrabold leading-none">4.9/5</div>
+        <div className="mt-1 font-mono text-[0.62rem] uppercase tracking-[0.08em] text-white/80">
           Client Rating
         </div>
       </div>

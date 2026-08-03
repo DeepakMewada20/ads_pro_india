@@ -12,7 +12,7 @@ export function WhyMetrics() {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 0.6, delay: 0.15 }}
     >
       <GlassCard variant="dark" hover="none" className="p-7 sm:p-8">

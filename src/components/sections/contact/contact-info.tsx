@@ -20,7 +20,7 @@ export function ContactInfo() {
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "0px" }}
       className="not-italic"
     >
       <ul className="flex flex-col gap-4">

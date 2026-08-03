@@ -1,40 +1,89 @@
-import type { ResultCard } from "@/types/results"
+export interface ExtendedResultCard {
+  id: string
+  category: "ecom" | "realestate" | "leadgen" | "local"
+  tag: string
+  clientName?: string
+  beforeMetric: string
+  afterMetric: string
+  stats: Array<{ value: string; label: string }>
+  note: string
+}
 
 export const resultsHeader = {
-  label: "Proof of Work",
-  title: "Numbers That Speak",
-  titleHighlight: "Louder Than Promises.",
+  label: "Verified Proof of Work",
+  title: "Real Client Campaign Results",
+  titleHighlight: "& Proven ROAS.",
 } as const
 
-export const resultsData: ResultCard[] = [
+export const resultsData: ExtendedResultCard[] = [
   {
-    id: "ecommerce",
-    tag: "E-Commerce · Fashion Brand",
+    id: "ecommerce-fashion",
+    category: "ecom",
+    tag: "E-Commerce · Apparel & Fashion",
+    clientName: "TrendVibe Fashion",
+    beforeMetric: "1.2x ROAS (Losing Money)",
+    afterMetric: "4.8x ROAS (₹14.5L/mo)",
     stats: [
-      { value: "3.8x", label: "ROAS Achieved" },
-      { value: "₹12L+", label: "Monthly Revenue" },
-      { value: "₹3.2L", label: "Ad Spend" },
+      { value: "4.8x", label: "ROAS Achieved" },
+      { value: "₹14.5L", label: "Monthly Revenue" },
+      { value: "₹3.0L", label: "Ad Spend" },
     ],
-    note: "Scaled Meta Ads from ₹30K/mo to ₹3.2L/mo in 4 months with improved creatives and audience segmentation.",
+    note: "Scaled Meta Advantage+ Shopping campaigns with high-converting video UGC creatives and retargeting funnels.",
   },
   {
-    id: "realestate",
-    tag: "Real Estate · Lead Generation",
+    id: "realestate-luxury",
+    category: "realestate",
+    tag: "Real Estate · Luxury Apartments",
+    clientName: "Indore Heights Realty",
+    beforeMetric: "₹850 Cost Per Lead",
+    afterMetric: "₹240 Qualified CPL",
     stats: [
-      { value: "500+", label: "Leads in 30 Days" },
-      { value: "₹18L+", label: "Revenue Generated" },
-      { value: "4.1x", label: "ROAS Achieved" },
+      { value: "620+", label: "Verified Leads" },
+      { value: "₹2.4Cr", label: "Sales Pipeline" },
+      { value: "5.2x", label: "Estimated ROI" },
     ],
-    note: "Revamped the entire ad funnel — creative to landing page — tripling lead volume and scaling revenue 3x in 60 days.",
+    note: "Revamped real estate lead generation funnel with custom instant forms and automated WhatsApp lead nurture.",
   },
   {
-    id: "coach",
-    tag: "Online Coach · High-Ticket",
+    id: "coach-high-ticket",
+    category: "leadgen",
+    tag: "High-Ticket Coaching & B2B",
+    clientName: "ScaleUp Academy",
+    beforeMetric: "15 Calls / Month",
+    afterMetric: "140 Calls / Month",
     stats: [
-      { value: "$42K", label: "Revenue Generated" },
-      { value: "5.2x", label: "ROAS" },
-      { value: "120", label: "Calls Booked" },
+      { value: "$48K", label: "Revenue Generated" },
+      { value: "5.4x", label: "ROAS" },
+      { value: "140", label: "Calls Booked" },
     ],
-    note: "Google + Meta combined funnel for a $5K coaching program. 120 discovery calls booked in 60 days.",
+    note: "Combined Google Search Ads + Meta Retargeting for high-ticket $3K program with automated VSL funnel.",
+  },
+  {
+    id: "d2c-skincare",
+    category: "ecom",
+    tag: "D2C · Organic Skincare",
+    clientName: "GlowNature Organics",
+    beforeMetric: "₹4.2L Monthly Sales",
+    afterMetric: "₹18.6L Monthly Sales",
+    stats: [
+      { value: "4.4x", label: "Average ROAS" },
+      { value: "3,400+", label: "Orders Shipped" },
+      { value: "34%", label: "Repeat Buyers" },
+    ],
+    note: "Built scalable Meta ad funnel focusing on before/after video hooks and bundle offer landing pages.",
+  },
+  {
+    id: "local-dental",
+    category: "local",
+    tag: "Local Clinic · Multi-Location",
+    clientName: "Apex Dental Care",
+    beforeMetric: "20 Patients / Month",
+    afterMetric: "115 Patients / Month",
+    stats: [
+      { value: "115+", label: "New Appointments" },
+      { value: "₹140", label: "Cost Per Booking" },
+      { value: "6.5x", label: "ROAS" },
+    ],
+    note: "Hyper-targeted Google Local Search Ads & Meta Geo-Fencing to drive high-margin dental implant bookings.",
   },
 ]

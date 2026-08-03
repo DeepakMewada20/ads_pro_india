@@ -11,7 +11,7 @@ import { Textarea } from "@/components/ui/textarea"
 import { ContactFormField } from "./contact-form-field"
 import { ContactFormSelect } from "./contact-form-select"
 import { contactConfig, budgetOptions } from "@/data/contact"
-import { MessageCircle } from "lucide-react"
+import { WhatsAppIcon } from "@/components/common/whatsapp-icon"
 import type { ContactFormData } from "@/types/contact"
 
 const contactSchema = z.object({
@@ -61,7 +61,7 @@ export function ContactForm() {
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true, margin: "0px" }}
       transition={{ duration: 0.5, delay: 0.15 }}
     >
       <GlassCard variant="light" hover="none" className="p-6 sm:p-8 lg:p-10">
@@ -135,7 +135,7 @@ export function ContactForm() {
             className="mt-6 w-full justify-center"
             disabled={isSubmitting}
           >
-            <MessageCircle className="h-5 w-5" />
+            <WhatsAppIcon className="h-5 w-5" fill="#ffffff" />
             {contactConfig.submitLabel}
           </AnimatedButton>
         </form>
