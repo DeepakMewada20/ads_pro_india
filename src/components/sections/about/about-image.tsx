@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import { motion, useMotionValue, useSpring } from "framer-motion"
 import { FOUNDER } from "@/constants/site"
 
@@ -30,7 +31,7 @@ export function AboutImage() {
       onMouseLeave={handleLeave}
     >
       <motion.div
-        className="absolute inset-[-12px] rounded-[50%] border-[2px] border-primary-light/30"
+        className="absolute inset-[-12px] rounded-[30px] border-[2px] border-primary-light/30"
         style={{
           background: "radial-gradient(circle, rgba(26,111,255,0.06), transparent 70%)",
           rotate: springX
@@ -40,7 +41,7 @@ export function AboutImage() {
       />
 
       <motion.div
-        className="relative aspect-[4/5] overflow-hidden rounded-[24px]"
+        className="relative aspect-[4/5] overflow-hidden rounded-[24px] bg-gradient-to-br from-primary-bg to-primary/10 shadow-[0_20px_50px_rgba(26,111,255,0.15)]"
         style={{
           rotateX: springY,
           rotateY: springX,
@@ -48,15 +49,16 @@ export function AboutImage() {
           perspective: 800,
         }}
       >
-        <div className="flex h-full w-full items-end justify-center bg-gradient-to-br from-primary-bg to-primary/10 pb-6">
-          <div className="text-center">
-            <div className="mx-auto mb-2 flex h-20 w-20 items-center justify-center rounded-full bg-primary text-[2rem] text-white shadow-[0_12px_40px_rgba(26,111,255,0.3)]">
-              {FOUNDER.name.split(" ").map((n) => n[0]).join("")}
-            </div>
-            <div className="font-semibold text-ink">{FOUNDER.name}</div>
-            <div className="font-mono text-[0.65rem] uppercase tracking-[0.08em] text-muted">
-              {FOUNDER.role}
-            </div>
+        <Image
+          src="/images/gautam-mali-2.jpg"
+          alt={`${FOUNDER.name} - ${FOUNDER.role}`}
+          fill
+          className="object-cover object-center"
+        />
+        <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/40 to-transparent p-5 text-white backdrop-blur-[2px]">
+          <div className="font-serif text-[1.1rem] font-bold text-white">{FOUNDER.name}</div>
+          <div className="font-mono text-[0.68rem] uppercase tracking-[0.1em] text-primary-light font-semibold">
+            {FOUNDER.role}
           </div>
         </div>
       </motion.div>

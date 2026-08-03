@@ -21,7 +21,7 @@ export function HeroFloatingCard({ card }: HeroFloatingCardProps) {
   return (
     <div
       className={cn(
-        "absolute z-10 inline-flex items-center gap-3 whitespace-nowrap rounded-xl border border-border bg-white px-[1.1rem] py-3 shadow-[0_8px_32px_rgba(26,111,255,0.14)]",
+        "absolute z-20 inline-flex items-center gap-3 whitespace-nowrap rounded-xl border border-border bg-white px-[1.1rem] py-3 shadow-[0_8px_32px_rgba(26,111,255,0.14)]",
         positionClasses[card.position],
         delayClasses[card.position],
       )}
