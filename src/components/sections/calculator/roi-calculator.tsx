@@ -8,10 +8,10 @@ import { SectionHeading } from "@/components/common/section-heading"
 import { WhatsAppIcon } from "@/components/common/whatsapp-icon"
 
 const INDUSTRIES = [
-  { id: "ecom", name: "E-Commerce / D2C", avgCpa: 280, avgAov: 1499, roas: "4.2x - 5.5x" },
-  { id: "realestate", name: "Real Estate", avgCpa: 450, avgAov: 50000, roas: "8x - 12x Pipeline" },
-  { id: "b2b", name: "B2B & Lead Gen", avgCpa: 350, avgAov: 15000, roas: "3.8x - 6.0x" },
-  { id: "local", name: "Local Business / Services", avgCpa: 180, avgAov: 4500, roas: "4.5x - 7.0x" },
+  { id: "ecom", name: "E-Commerce / D2C", avgCpa: 280, avgAov: 1499, roas: "3.2x - 4.5x", minRoas: 3.2 },
+  { id: "realestate", name: "Real Estate", avgCpa: 450, avgAov: 50000, roas: "6x - 9x Pipeline", minRoas: 6.0 },
+  { id: "b2b", name: "B2B & Lead Gen", avgCpa: 350, avgAov: 15000, roas: "2.8x - 4.5x", minRoas: 2.8 },
+  { id: "local", name: "Local Business / Services", avgCpa: 180, avgAov: 4500, roas: "3.5x - 5.0x", minRoas: 3.5 },
 ]
 
 export function RoiCalculator() {
@@ -28,7 +28,7 @@ export function RoiCalculator() {
 
   // Estimations
   const estimatedLeads = Math.round(spend / selectedIndustry.avgCpa)
-  const projectedRevenue = Math.round(spend * (selectedIndustry.id === "realestate" ? 8 : 4.2))
+  const projectedRevenue = Math.round(spend * selectedIndustry.minRoas)
 
   const waMessage = `Hi Gautam, I calculated my budget (${formatCurrency(spend)}/month) for ${selectedIndustry.name} on your ROI Calculator. I want to discuss achieving ${formatCurrency(projectedRevenue)} projected revenue!`
   const waUrl = `https://wa.me/916268665115?text=${encodeURIComponent(waMessage)}`
