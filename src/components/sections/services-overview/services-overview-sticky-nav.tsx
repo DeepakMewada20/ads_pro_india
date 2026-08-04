@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import { motion, useScroll, useMotionValueEvent } from "framer-motion"
 import { cn } from "@/lib/utils"
 
 const NAV_ITEMS = [
@@ -14,6 +14,21 @@ const NAV_ITEMS = [
 
 export function ServicesOverviewStickyNav() {
   const [activeSection, setActiveSection] = useState("hero")
+  const [isVisible, setIsVisible] = useState(true)
+  const { scrollY } = useScroll()
+
+  useMotionValueEvent(scrollY, "change", (current) => {
+    const previous = scrollY.getPrevious() ?? 0
+    const diff = current - previous
+
+    if (current <= 10) {
+      setIsVisible(true)
+    } else if (diff > 2) {
+      setIsVisible(false)
+    } else if (diff < -2) {
+      setIsVisible(true)
+    }
+  })
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +52,12 @@ export function ServicesOverviewStickyNav() {
   }, [])
 
   return (
-    <div className="sticky top-[70px] z-40 border-b border-slate-200/80 bg-white/85 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-[#060914]/85">
+    <motion.div
+      initial={{ y: 0 }}
+      animate={{ y: isVisible ? 0 : -120 }}
+      transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+      className="sticky top-[70px] z-40 border-b border-slate-200/80 bg-white/85 shadow-sm backdrop-blur-xl dark:border-white/10 dark:bg-[#060914]/85"
+    >
       <div className="mx-auto flex max-w-6xl items-center justify-between overflow-x-auto px-4 py-3 sm:px-6 lg:px-8 no-scrollbar">
         <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary">
           <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
@@ -70,6 +90,6 @@ export function ServicesOverviewStickyNav() {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
