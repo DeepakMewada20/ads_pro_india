@@ -35,9 +35,9 @@ export function ServicesFaqSection() {
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px 100px 0px" }}
-                transition={{ duration: 0.3, delay: idx * 0.03 }}
+                transition={{ duration: 0.4, delay: idx * 0.03, ease: [0.16, 1, 0.3, 1] }}
                 className={cn(
-                  "rounded-xl border transition-all overflow-hidden",
+                  "rounded-xl border transform-gpu transition-colors duration-300 overflow-hidden",
                   isOpen
                     ? "border-blue-500/40 bg-slate-900 shadow-lg"
                     : "border-white/10 bg-slate-900/60 hover:border-white/20",
@@ -70,8 +70,8 @@ export function ServicesFaqSection() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.25 }}
                     >
-                      <div className="border-t border-white/5 px-4 pb-4 pt-3 text-xs text-slate-300 leading-relaxed font-sans">
-                        <p>{faq.answer}</p>
+                      <div className="border-t border-white/5 px-4 pb-4 pt-3 text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
+                        <p className="whitespace-pre-line">{faq.answer}</p>
                       </div>
                     </motion.div>
                   )}

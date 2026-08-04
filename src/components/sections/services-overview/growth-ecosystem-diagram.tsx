@@ -48,8 +48,8 @@ export function GrowthEcosystemDiagram() {
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px 100px 0px" }}
-                transition={{ duration: 0.4, delay: idx * 0.05 }}
-                className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:border-primary/40 hover:shadow-md transition-all duration-300"
+                transition={{ duration: 0.45, delay: idx * 0.04, ease: [0.16, 1, 0.3, 1] }}
+                className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:border-primary/40 hover:shadow-md transform-gpu transition-colors duration-300"
               >
                 <div className="flex items-center justify-between text-[10px] font-mono text-slate-400">
                   <span>{block.category}</span>

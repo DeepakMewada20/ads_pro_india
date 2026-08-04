@@ -60,8 +60,8 @@ export function WhyBusinessesFail() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "0px 0px 100px 0px" }}
-              transition={{ duration: 0.4, delay: idx * 0.08 }}
-              className="rounded-2xl border border-white/10 bg-slate-900/80 p-6 backdrop-blur-xl hover:border-blue-500/40 transition-colors"
+              transition={{ duration: 0.45, delay: idx * 0.06, ease: [0.16, 1, 0.3, 1] }}
+              className="rounded-2xl border border-white/10 bg-slate-900/90 p-6 backdrop-blur-md transform-gpu hover:border-blue-500/40 transition-colors"
             >
               <div className="flex items-center justify-between">
                 <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-blue-400 bg-blue-950/60 px-2.5 py-0.5 rounded border border-blue-500/30">

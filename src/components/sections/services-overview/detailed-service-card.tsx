@@ -18,6 +18,7 @@ import {
 import type { DetailedService } from "@/data/detailed-services"
 import { AnimatedButton } from "@/components/common/animated-button"
 import { WhatsAppIcon } from "@/components/common/whatsapp-icon"
+import { FeaturedProjectCard } from "./featured-project-card"
 
 const ICON_MAP: Record<string, any> = {
   ThumbsUp,
@@ -44,12 +45,12 @@ export function DetailedServiceCard({ service, index }: DetailedServiceCardProps
   return (
     <motion.div
       id={service.id}
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "0px 0px 100px 0px" }}
-      transition={{ duration: 0.45, delay: Math.min(index * 0.04, 0.15), ease: "easeOut" }}
+      transition={{ duration: 0.5, delay: Math.min(index * 0.04, 0.12), ease: [0.16, 1, 0.3, 1] }}
       whileHover={{ y: -3, transition: { duration: 0.2 } }}
-      className="scroll-mt-32 rounded-2xl border border-white/10 bg-slate-900/90 p-6 sm:p-8 shadow-xl backdrop-blur-xl transition-all duration-300 hover:border-blue-500/40"
+      className="scroll-mt-32 rounded-2xl border border-white/10 bg-slate-900/95 p-6 sm:p-8 shadow-xl backdrop-blur-md transform-gpu transition-colors duration-300 hover:border-blue-500/40"
     >
       <div className="grid gap-8 lg:grid-cols-12 lg:items-start">
         {/* Left Column: Icon, Title, Tagline, Overview, Subtypes */}
@@ -129,6 +130,9 @@ export function DetailedServiceCard({ service, index }: DetailedServiceCardProps
           </div>
         </div>
       </div>
+
+      {/* Featured Project Showcase for App Development */}
+      {service.id === "app-dev" && <FeaturedProjectCard />}
 
       {/* Footer Action */}
       <div className="mt-6 flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-white/5 text-xs">
