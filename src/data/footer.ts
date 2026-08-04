@@ -11,12 +11,12 @@ export const footerConfig = {
       id: "services",
       title: "Services",
       links: [
-        { label: "Meta Ads", href: "#services" },
-        { label: "Google Ads", href: "#services" },
-        { label: "E-commerce Funnels", href: "#services" },
-        { label: "Website Development", href: "#services" },
-        { label: "Graphic Design", href: "#services" },
-        { label: "Video Editing", href: "#services" },
+        { label: "Services Overview", href: "/services-overview" },
+        { label: "Meta Ads", href: "/services-overview#meta-ads" },
+        { label: "Google Ads", href: "/services-overview#google-ads" },
+        { label: "E-commerce Funnels", href: "/services-overview#funnels" },
+        { label: "Website Development", href: "/services-overview#web-dev" },
+        { label: "Creative & Copy", href: "/services-overview#creative" },
       ],
     },
     {

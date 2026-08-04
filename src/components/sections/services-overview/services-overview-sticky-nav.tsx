@@ -9,6 +9,7 @@ const NAV_ITEMS = [
   { id: "why-fail", label: "02. Why Ads Fail", href: "#why-fail" },
   { id: "solution-timeline", label: "03. Growth Timeline", href: "#solution-timeline" },
   { id: "ecosystem", label: "04. Complete Ecosystem", href: "#ecosystem" },
+  { id: "capabilities-breakdown", label: "05. All Services", href: "#capabilities-breakdown" },
 ]
 
 export function ServicesOverviewStickyNav() {

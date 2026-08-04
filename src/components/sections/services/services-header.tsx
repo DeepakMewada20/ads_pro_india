@@ -1,5 +1,7 @@
 import { SectionBadge } from "@/components/common/section-badge"
 import { SectionHeading } from "@/components/common/section-heading"
+import { AnimatedButton } from "@/components/common/animated-button"
+import { ArrowRight } from "lucide-react"
 
 export function ServicesHeader() {
   return (
@@ -19,6 +21,11 @@ export function ServicesHeader() {
         align="center"
         className="mx-auto max-w-[650px]"
       />
+      <div className="mt-6 flex justify-center">
+        <AnimatedButton href="/services-overview#capabilities-breakdown" variant="primary" className="py-2.5 px-6 text-xs gap-2">
+          Explore Complete Growth Ecosystem <ArrowRight className="h-3.5 w-3.5" />
+        </AnimatedButton>
+      </div>
     </div>
   )
 }

@@ -6,21 +6,21 @@ import { SectionHeading } from "@/components/common/section-heading"
 
 export function DetailedServicesList() {
   return (
-    <section className="relative py-20 lg:py-28 bg-slate-100/70 dark:bg-[#060914] overflow-hidden">
-      {/* Background accents */}
-      <div className="pointer-events-none absolute left-0 top-1/4 h-96 w-96 rounded-full bg-blue-500/5 blur-3xl" />
-      <div className="pointer-events-none absolute right-0 bottom-1/4 h-96 w-96 rounded-full bg-indigo-500/5 blur-3xl" />
+    <section id="capabilities-breakdown" className="relative py-20 lg:py-28 bg-slate-950 text-white overflow-hidden border-t border-white/5">
+      {/* Soft Glow */}
+      <div className="pointer-events-none absolute left-0 top-1/3 h-96 w-96 rounded-full bg-blue-600/5 blur-3xl" />
 
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           label="Capabilities Breakdown"
           title="Explore Every Service in Our Growth Engine"
-          description="Detailed breakdown of how each core service functions, why your business needs it, and how it interlocks with our complete digital ecosystem."
+          description="A sleek overview of how each service functions, key deliverables, and ecosystem integration."
           align="center"
+          tone="dark"
         />
 
-        {/* 9 Services Rendered sequentially */}
-        <div className="mt-16 space-y-16 lg:space-y-24">
+        {/* 9 Services */}
+        <div className="mt-14 space-y-8">
           {DETAILED_SERVICES_DATA.map((service, idx) => (
             <DetailedServiceCard key={service.id} service={service} index={idx} />
           ))}

@@ -4,17 +4,18 @@ export interface NavLink {
 }
 
 export const navigationData: NavLink[] = [
-  { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Overview", href: "/services-overview" },
+  { label: "Process", href: "/#process" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ]
 
 export const navbarConfig = {
   logoText: "AdsProIndia",
   cta: {
     label: "Book Free Call",
-    href: "#contact",
+    href: "/#contact",
   },
 }

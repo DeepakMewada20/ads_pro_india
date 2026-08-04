@@ -92,7 +92,7 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
 
       {/* Footer CTA */}
       <div className="mt-auto pt-2">
-        <ServiceCta href={`#${service.id}`} label="Explore Service" />
+        <ServiceCta href={`/services-overview#${service.id}`} label="Explore Service" />
       </div>
     </GlassCard>
   )
