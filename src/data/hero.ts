@@ -13,12 +13,12 @@ export const heroContent: HeroContent = {
 export const heroButtons: HeroButton[] = [
   {
     label: "Book Free Strategy Call",
-    href: "https://wa.me/916268665115",
+    href: `https://wa.me/916268665115?text=${encodeURIComponent("Hi Gautam, I want to book a Free 1-on-1 Growth Strategy Call for my business with Ads Pro India. Please share available time slots!")}`,
     variant: "primary",
   },
   {
     label: "Chat on WhatsApp",
-    href: "https://wa.me/916268665115",
+    href: `https://wa.me/916268665115?text=${encodeURIComponent("Hi Gautam, I'm visiting Ads Pro India website and want to discuss scaling my Meta & Google Ads campaigns.")}`,
     variant: "whatsapp",
   },
 ]
