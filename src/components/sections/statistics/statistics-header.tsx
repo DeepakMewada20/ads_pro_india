@@ -10,7 +10,7 @@ export function StatisticsHeader() {
         Results That{" "}
         <em className="not-italic text-primary-light">Speak</em>
       </h2>
-      <p className="mx-auto mt-4 max-w-[480px] text-sm leading-relaxed text-white/50">
+      <p className="mx-auto mt-4 max-w-[480px] text-base leading-relaxed text-white/60">
         Cold, hard numbers from 5+ years of managing performance marketing campaigns.
       </p>
     </div>

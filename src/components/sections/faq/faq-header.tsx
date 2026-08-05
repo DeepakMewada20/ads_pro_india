@@ -10,7 +10,7 @@ export function FAQHeader() {
         Frequently Asked{" "}
         <em className="not-italic text-primary">Questions</em>
       </h2>
-      <p className="mx-auto mt-4 max-w-[500px] text-sm leading-relaxed text-muted">
+      <p className="mx-auto mt-4 max-w-[500px] text-base leading-relaxed text-muted">
         Everything you need to know about working with Ads Pro India. Still have questions? Message us on WhatsApp.
       </p>
     </div>

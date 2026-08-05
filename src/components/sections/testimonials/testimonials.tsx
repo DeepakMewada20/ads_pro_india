@@ -6,7 +6,7 @@ import { TestimonialsCarousel } from "./testimonials-carousel"
 
 export function Testimonials() {
   return (
-    <SectionContainer id="testimonials" background="dark">
+    <SectionContainer id="testimonials" background="dark" className="pt-6 sm:pt-8 lg:pt-10">
       <MaxWidthContainer>
         <TestimonialsHeader />
         <TestimonialsCarousel />

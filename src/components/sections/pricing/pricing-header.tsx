@@ -10,7 +10,7 @@ export function PricingHeader() {
         Choose the Plan That{" "}
         <em className="not-italic text-primary">Fits You</em>
       </h2>
-      <p className="mx-auto mt-3 max-w-[520px] text-sm leading-relaxed text-muted font-medium">
+      <p className="mx-auto mt-3 max-w-[500px] text-base leading-relaxed text-muted font-medium">
         No hidden fees. No surprises. Pick a plan and let&apos;s start growing your business today.
       </p>
     </div>

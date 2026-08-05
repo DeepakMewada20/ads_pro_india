@@ -31,7 +31,7 @@ export function Results() {
   }, [activeTab])
 
   return (
-    <SectionContainer id="results" background="dark" className="relative overflow-hidden">
+    <SectionContainer id="results" background="dark" className="relative overflow-hidden pb-8 sm:pb-10 lg:pb-12">
       <MaxWidthContainer>
         <ResultsHeader />
 

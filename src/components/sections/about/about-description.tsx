@@ -4,10 +4,11 @@ export function AboutDescription() {
   return (
     <>
       {aboutContent.paragraphs.map((para, i) => (
-        <p key={i} className="text-sm leading-[1.8] text-white/60">
+        <p key={i} className="text-base leading-[1.75] text-white/70">
           {para}
         </p>
       ))}
     </>
   )
 }
+

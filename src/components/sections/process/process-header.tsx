@@ -11,7 +11,7 @@ export function ProcessHeader() {
         <br />
         in 3 Simple Steps.
       </h2>
-      <p className="mx-auto mt-4 max-w-[500px] text-sm leading-relaxed text-muted font-medium">
+      <p className="mx-auto mt-4 max-w-[500px] text-base leading-relaxed text-muted font-medium">
         No fluff, no confusion. Here&apos;s exactly how we take your business from where it is today to where you want it to be.
       </p>
     </div>

@@ -10,7 +10,7 @@ export function TestimonialsHeader() {
         What Our{" "}
         <em className="not-italic text-primary-light">Clients Say</em>
       </h2>
-      <p className="mx-auto mt-4 max-w-[480px] text-sm leading-relaxed text-white/50">
+      <p className="mx-auto mt-4 max-w-[500px] text-base leading-relaxed text-white/60">
         Real feedback from real business owners across India who trust us with their ad spend.
       </p>
     </div>

@@ -35,7 +35,7 @@ export function SectionHeading({
         {title}
       </h2>
       {description && (
-        <p className={cn("mt-4 max-w-[500px] text-sm leading-relaxed", tone === "light" ? "text-muted" : "text-white/50")}>
+        <p className={cn("mt-4 max-w-[520px] text-base leading-relaxed", tone === "light" ? "text-muted" : "text-white/60")}>
           {description}
         </p>
       )}

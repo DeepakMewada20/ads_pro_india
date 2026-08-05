@@ -4,7 +4,7 @@ import { HeroFloatingCard } from "./hero-floating-card"
 
 export function HeroImage() {
   return (
-    <div className="relative">
+    <div className="relative -mt-4 lg:-mt-10">
       <div className="pointer-events-none absolute -top-4 right-2 sm:right-4 z-30 animate-[float_5s_ease-in-out_infinite] rounded-lg border border-white/30 bg-primary/95 px-4 py-2.5 font-sans text-[0.8rem] font-bold text-white shadow-[0_8px_28px_rgba(26,111,255,0.6)] backdrop-blur-md">
         📈 {heroFloatingBadge}
       </div>

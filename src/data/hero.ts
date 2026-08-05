@@ -6,7 +6,7 @@ export const heroContent: HeroContent = {
   titleHighlight: "More Profit.",
   titleSuffix: "\nGuaranteed.",
   subtitle:
-    "We're not just an agency — we're your growth partners. Meta Ads, Google Ads, funnels, creatives & websites. All under one roof. All built to generate real revenue, not just reach.",
+    "We're not just an agency — we're your growth partners. Meta Ads, Google Ads, funnels, creatives, websites & app development. All under one roof. All built to generate real revenue, not just reach.",
   subtitleHighlights: ["growth partners", "real revenue, not just reach."],
 }
 
