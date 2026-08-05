@@ -22,9 +22,8 @@ export function Footer() {
       <div className="mx-auto w-full max-w-[1200px]">
         <motion.div
           variants={container}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "0px" }}
+          initial="show"
+          animate="show"
           className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr] lg:gap-12"
         >
           <motion.div variants={itemAnim}>

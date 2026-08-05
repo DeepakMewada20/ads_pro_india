@@ -22,9 +22,8 @@ export function Why() {
             <WhyHeader />
             <motion.ul
               variants={container}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: true, margin: "0px" }}
+              initial="show"
+              animate="show"
               className="mt-10 flex flex-col gap-8"
             >
               {whyItems.map((item) => (

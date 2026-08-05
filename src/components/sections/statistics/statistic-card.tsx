@@ -14,7 +14,7 @@ export function StatisticCard({ stat }: StatisticCardProps) {
   const numValue = numMatch ? parseFloat(numMatch[1]) : 0
   const isCrore = raw.includes("Cr")
   const isPlus = raw.includes("+")
-  const displayValue = raw
+  const displayValue = String(stat.prefix ?? "") + raw
 
   const { ref, isVisible } = useReveal({ amount: 0 })
   const counter = useCounter({
@@ -34,7 +34,7 @@ export function StatisticCard({ stat }: StatisticCardProps) {
       className="rounded-2xl border border-white/10 bg-white/5 px-6 py-8 text-center shadow-[0_8px_32px_rgba(0,0,0,0.2)] backdrop-blur-md transition-colors duration-300 hover:bg-white/10"
     >
       <div className="font-serif text-[clamp(1.8rem,4vw,2.8rem)] font-extrabold leading-none text-white">
-        {isCrore ? displayValue : counter.display || displayValue}
+        {isCrore ? displayValue : (counter.isAnimating ? counter.display : displayValue)}
       </div>
       <div className="mt-2 font-mono text-[0.7rem] font-medium uppercase tracking-[0.06em] text-white/60">
         {stat.label}

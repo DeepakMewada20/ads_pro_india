@@ -57,10 +57,9 @@ export function WhyBusinessesFail() {
           {FAILURE_CARDS.map((card, idx) => (
             <motion.div
               key={card.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "0px 0px 100px 0px" }}
-              transition={{ duration: 0.45, delay: idx * 0.06, ease: [0.16, 1, 0.3, 1] }}
+              initial={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.45, delay: idx * 0.06 }}
               className="rounded-2xl border border-white/10 bg-slate-900/90 p-6 backdrop-blur-md transform-gpu hover:border-blue-500/40 transition-colors"
             >
               <div className="flex items-center justify-between">

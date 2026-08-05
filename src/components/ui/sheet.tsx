@@ -19,7 +19,7 @@ const SheetOverlay = forwardRef<
 >(({ className, ...props }, ref) => (
   <Dialog.Overlay
     className={cn(
-      "fixed inset-0 z-50 bg-black/50 backdrop-blur-sm data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      "fixed inset-0 z-[9998] bg-black/80 backdrop-blur-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
       className,
     )}
     {...props}
@@ -37,17 +37,17 @@ const SheetContent = forwardRef<
     <Dialog.Content
       ref={ref}
       className={cn(
-        "fixed z-50 flex flex-col gap-4 bg-white p-6 shadow-lg transition ease-in-out dark:bg-ink",
+        "fixed z-[9999] flex flex-col gap-4 bg-slate-950 p-6 shadow-2xl transition ease-in-out dark:bg-slate-950 text-white border-l border-white/10",
         side === "right"
-          ? "inset-y-0 right-0 h-full w-full max-w-sm border-l data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right"
-          : "inset-y-0 left-0 h-full w-full max-w-sm border-r data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left",
+          ? "inset-y-0 right-0 h-full w-full max-w-xs data-[state=closed]:slide-out-to-right data-[state=open]:slide-in-from-right"
+          : "inset-y-0 left-0 h-full w-full max-w-xs data-[state=closed]:slide-out-to-left data-[state=open]:slide-in-from-left",
         className,
       )}
       {...props}
     >
       {children}
-      <Dialog.Close className="absolute right-4 top-4 rounded-sm p-1 opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
-        <X className="h-5 w-5" />
+      <Dialog.Close className="absolute right-5 top-5 rounded-full p-2 text-slate-300 hover:text-white hover:bg-white/10 transition-colors focus:outline-none cursor-pointer">
+        <X className="h-6 w-6" />
         <span className="sr-only">Close</span>
       </Dialog.Close>
     </Dialog.Content>

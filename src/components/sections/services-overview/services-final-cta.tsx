@@ -13,9 +13,8 @@ export function ServicesFinalCTA() {
     <section id="final-cta" className="relative py-20 lg:py-28 bg-slate-950 text-white overflow-hidden border-t border-white/5">
       <div className="relative mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center z-10">
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className="inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-3.5 py-1 text-xs font-semibold text-blue-300 mb-5"
         >
@@ -24,9 +23,8 @@ export function ServicesFinalCTA() {
         </motion.div>
 
         <motion.h2
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           className="font-serif text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight"
         >
@@ -34,9 +32,8 @@ export function ServicesFinalCTA() {
         </motion.h2>
 
         <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="mt-4 max-w-xl mx-auto text-xs sm:text-sm text-slate-300 leading-relaxed font-sans"
         >
@@ -44,9 +41,8 @@ export function ServicesFinalCTA() {
         </motion.p>
 
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mt-8 flex flex-wrap items-center justify-center gap-3"
         >

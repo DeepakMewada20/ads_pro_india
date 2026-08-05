@@ -40,7 +40,7 @@ export function ServicesGrid() {
               <motion.div
                 key={service.id}
                 layout
-                initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                initial={{ opacity: 1, scale: 1, y: 0 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}
                 exit={{ opacity: 0, scale: 0.9, y: 10 }}
                 transition={{ duration: 0.35, delay: i * 0.05 }}

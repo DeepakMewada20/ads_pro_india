@@ -10,9 +10,8 @@ export function StatisticsGrid() {
       {statisticsData.map((stat, i) => (
         <motion.div
           key={stat.label}
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "0px" }}
+          initial={{ opacity: 1, y: 0 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: i * 0.1 }}
         >
           <StatisticCard stat={stat} />

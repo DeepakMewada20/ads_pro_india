@@ -75,10 +75,9 @@ export function GrowthSolutionTimeline() {
             return (
               <motion.div
                 key={step.stepNumber}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "0px 0px 100px 0px" }}
-                transition={{ duration: 0.45, delay: idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                initial={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.45, delay: idx * 0.05 }}
                 className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm hover:border-primary/40 hover:shadow-md transform-gpu transition-colors duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
               >
                 <div className="flex items-start gap-4">

@@ -23,8 +23,8 @@ export function AboutImage() {
   return (
     <motion.div
       className="relative mx-auto max-w-[380px]"
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true, margin: "0px" }}
+      initial={{ opacity: 1, x: 0 }}
+      animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
       onMouseMove={handleMouse}
       onMouseLeave={handleLeave}

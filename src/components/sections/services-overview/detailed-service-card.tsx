@@ -45,10 +45,9 @@ export function DetailedServiceCard({ service, index }: DetailedServiceCardProps
   return (
     <motion.div
       id={service.id}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "0px 0px 100px 0px" }}
-      transition={{ duration: 0.5, delay: Math.min(index * 0.04, 0.12), ease: [0.16, 1, 0.3, 1] }}
+      initial={{ opacity: 1, y: 0 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: Math.min(index * 0.04, 0.12) }}
       whileHover={{ y: -3, transition: { duration: 0.2 } }}
       className="scroll-mt-32 rounded-2xl border border-white/10 bg-slate-900/95 p-6 sm:p-8 shadow-xl backdrop-blur-md transform-gpu transition-colors duration-300 hover:border-blue-500/40"
     >

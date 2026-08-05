@@ -1,58 +1,99 @@
 "use client"
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { useState, useEffect } from "react"
 import { navigationData, navbarConfig } from "@/data/navigation"
 import { AnimatedButton } from "@/components/common/animated-button"
-import { motion } from "framer-motion"
+import { X } from "lucide-react"
 
 interface MobileMenuProps {
   isScrolled: boolean
 }
 
 export function MobileMenu({ isScrolled }: MobileMenuProps) {
-  const handleClick = () => {
-    const closeBtn = document.querySelector<HTMLButtonElement>('[data-state="open"] [data-close-button]')
-    closeBtn?.click()
-  }
+  const [isOpen, setIsOpen] = useState(false)
+
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "unset"
+    }
+    return () => {
+      document.body.style.overflow = "unset"
+    }
+  }, [isOpen])
 
   return (
-    <Sheet>
-      <SheetTrigger asChild>
-        <button
-          className="flex cursor-pointer flex-col items-center justify-center gap-[5px] lg:hidden"
-          aria-label="Open navigation menu"
-        >
-          <span className={`h-[2px] w-[22px] rounded-full transition-all duration-300 ${isScrolled ? "bg-ink" : "bg-white"}`} />
-          <span className={`h-[2px] w-[22px] rounded-full transition-all duration-300 ${isScrolled ? "bg-ink" : "bg-white"}`} />
-          <span className={`h-[2px] w-[22px] rounded-full transition-all duration-300 ${isScrolled ? "bg-ink" : "bg-white"}`} />
-        </button>
-      </SheetTrigger>
-      <SheetContent side="right" className="flex flex-col bg-white/98 backdrop-blur-2xl" aria-label="Navigation menu">
-        <nav aria-label="Mobile navigation" className="mt-16 flex flex-1 flex-col items-center justify-center gap-10">
-          {navigationData.map((link, i) => (
-            <motion.a
-              key={link.href}
-              href={link.href}
-              onClick={handleClick}
-              className="font-sans text-[1.4rem] font-bold no-underline text-ink"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.08, duration: 0.3 }}
+    <div className="lg:hidden">
+      {/* 3-Line Hamburger Trigger Button */}
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="relative z-[10001] flex h-11 w-11 cursor-pointer items-center justify-center rounded-xl p-2.5 transition-all active:scale-95"
+        aria-label="Toggle Menu"
+      >
+        {isOpen ? (
+          <X className="h-7 w-7 text-white" />
+        ) : (
+          <div className="flex flex-col items-center justify-center gap-[5px]">
+            <span className={`h-[2.5px] w-[24px] rounded-full transition-all duration-300 ${isScrolled ? "bg-slate-900" : "bg-white"}`} />
+            <span className={`h-[2.5px] w-[24px] rounded-full transition-all duration-300 ${isScrolled ? "bg-slate-900" : "bg-white"}`} />
+            <span className={`h-[2.5px] w-[24px] rounded-full transition-all duration-300 ${isScrolled ? "bg-slate-900" : "bg-white"}`} />
+          </div>
+        )}
+      </button>
+
+      {/* Dark Opaque Backdrop Overlay */}
+      {isOpen && (
+        <div
+          onClick={() => setIsOpen(false)}
+          className="fixed inset-0 z-[9999] bg-black/90 backdrop-blur-md transition-opacity duration-300"
+        />
+      )}
+
+      {/* Slide-over Solid Mobile Drawer Panel */}
+      <div
+        className={`fixed inset-y-0 right-0 z-[10000] flex w-[85vw] max-w-xs flex-col justify-between border-l border-white/15 bg-[#060914] p-6 text-white shadow-[0_0_60px_rgba(0,0,0,0.95)] transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div>
+          <div className="flex items-center justify-between border-b border-white/10 pb-4">
+            <span className="font-serif text-lg font-bold text-white">Menu Navigation</span>
+            <button
+              type="button"
+              onClick={() => setIsOpen(false)}
+              className="rounded-full p-1.5 text-slate-300 hover:bg-white/10 hover:text-white transition-colors"
             >
-              {link.label}
-            </motion.a>
-          ))}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: navigationData.length * 0.08 + 0.1, duration: 0.3 }}
+              <X className="h-6 w-6" />
+            </button>
+          </div>
+
+          <nav aria-label="Mobile navigation" className="mt-6 flex flex-col gap-2.5">
+            {navigationData.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="block rounded-xl border border-white/10 bg-white/[0.06] px-4 py-3 font-sans text-base font-extrabold text-white transition-all hover:border-primary/50 hover:bg-primary/20 hover:text-white active:scale-98"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+
+        <div className="border-t border-white/10 pt-4">
+          <AnimatedButton
+            href={navbarConfig.cta.href}
+            onClick={() => setIsOpen(false)}
+            className="w-full justify-center py-3.5 text-sm font-bold shadow-lg shadow-blue-600/30"
           >
-            <AnimatedButton href={navbarConfig.cta.href} onClick={handleClick}>
-              {navbarConfig.cta.label}
-            </AnimatedButton>
-          </motion.div>
-        </nav>
-      </SheetContent>
-    </Sheet>
+            {navbarConfig.cta.label}
+          </AnimatedButton>
+        </div>
+      </div>
+    </div>
   )
 }

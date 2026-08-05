@@ -18,9 +18,8 @@ export function ContactInfo() {
   return (
     <motion.address
       variants={container}
-      initial="hidden"
-      whileInView="show"
-      viewport={{ once: true, margin: "0px" }}
+      initial="show"
+      animate="show"
       className="not-italic"
     >
       <ul className="flex flex-col gap-4">
