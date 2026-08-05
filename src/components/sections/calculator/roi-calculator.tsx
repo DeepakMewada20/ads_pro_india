@@ -16,7 +16,7 @@ const INDUSTRIES = [
 
 export function RoiCalculator() {
   const sliderId = useId()
-  const [spend, setSpend] = useState<number>(100000) // Default 1 Lakh
+  const [spend, setSpend] = useState<number>(25000) // Default 25k as requested
   const [selectedIndustry, setSelectedIndustry] = useState(INDUSTRIES[0])
 
   const formatCurrency = (val: number) => {
@@ -89,16 +89,16 @@ export function RoiCalculator() {
               <input
                 id={sliderId}
                 type="range"
-                min={25000}
+                min={15000}
                 max={1000000}
-                step={25000}
+                step={5000}
                 value={spend}
                 onChange={(e) => setSpend(Number(e.target.value))}
                 className="mt-4 h-2.5 w-full cursor-pointer appearance-none rounded-lg bg-slate-200 accent-blue-600 focus:outline-none"
               />
 
               <div className="mt-2.5 flex justify-between text-xs font-semibold text-slate-500">
-                <span>₹25k / mo</span>
+                <span>₹15k / mo</span>
                 <span>₹5 Lakh / mo</span>
                 <span>₹10 Lakh+ / mo</span>
               </div>

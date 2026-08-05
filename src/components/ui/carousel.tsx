@@ -37,6 +37,7 @@ function Carousel({ children, className, opts }: CarouselProps) {
   })
   const [canScrollPrev, setCanScrollPrev] = useState(false)
   const [canScrollNext, setCanScrollNext] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   const onSelect = useCallback((api_: CarouselApi) => {
     if (!api_) return
@@ -45,6 +46,7 @@ function Carousel({ children, className, opts }: CarouselProps) {
   }, [])
 
   useEffect(() => {
+    setMounted(true)
     if (!api) return
     onSelect(api)
     api.on("select", onSelect)
@@ -56,7 +58,14 @@ function Carousel({ children, className, opts }: CarouselProps) {
   }, [api, onSelect])
 
   return (
-    <CarouselContext.Provider value={{ api, emblaRef, canScrollPrev, canScrollNext }}>
+    <CarouselContext.Provider
+      value={{
+        api,
+        emblaRef,
+        canScrollPrev: mounted ? canScrollPrev : false,
+        canScrollNext: mounted ? canScrollNext : false,
+      }}
+    >
       <div className={cn("relative", className)}>{children}</div>
     </CarouselContext.Provider>
   )
@@ -88,6 +97,7 @@ function CarouselPrevious({ className }: { className?: string }) {
       type="button"
       onClick={() => api?.scrollPrev()}
       disabled={!canScrollPrev}
+      suppressHydrationWarning
       aria-label="Previous slide"
       className={cn(
         "inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-ink shadow-sm transition-all hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 cursor-pointer",
@@ -107,6 +117,7 @@ function CarouselNext({ className }: { className?: string }) {
       type="button"
       onClick={() => api?.scrollNext()}
       disabled={!canScrollNext}
+      suppressHydrationWarning
       aria-label="Next slide"
       className={cn(
         "inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-ink shadow-sm transition-all hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 cursor-pointer",
