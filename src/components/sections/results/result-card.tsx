@@ -28,6 +28,7 @@ export function ResultCard({ result, index }: ResultCardProps) {
       animate={{ opacity: 1, scale: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.9, y: 10 }}
       transition={{ duration: 0.35, delay: index * 0.08 }}
+      className="h-full"
     >
       <GlassCard variant="dark" hover="lift" className="relative flex h-full flex-col p-6 rounded-2xl border border-white/10 bg-[#0d121f]">
         <div className="flex items-center justify-between gap-2 mb-3">

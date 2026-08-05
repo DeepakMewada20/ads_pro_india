@@ -10,6 +10,7 @@ type CarouselApi = ReturnType<typeof useEmblaCarousel>[1]
 
 interface CarouselContextValue {
   api: CarouselApi
+  emblaRef: ReturnType<typeof useEmblaCarousel>[0]
   canScrollPrev: boolean
   canScrollNext: boolean
 }
@@ -55,16 +56,20 @@ function Carousel({ children, className, opts }: CarouselProps) {
   }, [api, onSelect])
 
   return (
-    <CarouselContext.Provider value={{ api, canScrollPrev, canScrollNext }}>
-      <div ref={emblaRef} className={cn("overflow-hidden", className)}>
-        {children}
-      </div>
+    <CarouselContext.Provider value={{ api, emblaRef, canScrollPrev, canScrollNext }}>
+      <div className={cn("relative", className)}>{children}</div>
     </CarouselContext.Provider>
   )
 }
 
 function CarouselContent({ children, className }: { children: ReactNode; className?: string }) {
-  return <div className={cn("flex", className)}>{children}</div>
+  const { emblaRef } = useCarousel()
+
+  return (
+    <div ref={emblaRef} className="overflow-hidden py-2 -my-2">
+      <div className={cn("flex", className)}>{children}</div>
+    </div>
+  )
 }
 
 function CarouselItem({ children, className }: { children: ReactNode; className?: string }) {
@@ -80,11 +85,12 @@ function CarouselPrevious({ className }: { className?: string }) {
 
   return (
     <button
+      type="button"
       onClick={() => api?.scrollPrev()}
       disabled={!canScrollPrev}
-      aria-label="Previous testimonial"
+      aria-label="Previous slide"
       className={cn(
-        "inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-ink shadow-sm transition-all hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30",
+        "inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-ink shadow-sm transition-all hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 cursor-pointer",
         className,
       )}
     >
@@ -98,11 +104,12 @@ function CarouselNext({ className }: { className?: string }) {
 
   return (
     <button
+      type="button"
       onClick={() => api?.scrollNext()}
       disabled={!canScrollNext}
-      aria-label="Next testimonial"
+      aria-label="Next slide"
       className={cn(
-        "inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-ink shadow-sm transition-all hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30",
+        "inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-white text-ink shadow-sm transition-all hover:border-primary hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 cursor-pointer",
         className,
       )}
     >
