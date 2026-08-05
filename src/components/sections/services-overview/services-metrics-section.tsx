@@ -15,7 +15,7 @@ const SUCCESS_METRICS = [
 
 export function ServicesMetricsSection() {
   return (
-    <section id="success-metrics" className="relative py-20 lg:py-28 bg-white text-slate-900 overflow-hidden border-b border-slate-200/80">
+    <section id="success-metrics" className="relative py-20 lg:py-28 bg-[#f8fafc] text-slate-900 overflow-hidden border-b border-slate-200/80">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           label="Measurable Growth"
@@ -35,7 +35,7 @@ export function ServicesMetricsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px 100px 0px" }}
                 transition={{ duration: 0.45, delay: idx * 0.04, ease: [0.16, 1, 0.3, 1] }}
-                className="group rounded-2xl border border-slate-200 bg-slate-50 p-5 shadow-sm hover:border-primary/40 hover:shadow-md transform-gpu transition-colors duration-300"
+                className="group rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm hover:border-primary/40 hover:shadow-md transform-gpu transition-colors duration-300"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-primary border border-blue-200">

@@ -16,7 +16,7 @@ const INDUSTRIES = [
 
 export function IndustriesServedSection() {
   return (
-    <section id="industries-served" className="relative py-20 lg:py-28 bg-slate-50 text-slate-900 overflow-hidden border-b border-slate-200/80">
+    <section id="industries-served" className="relative py-20 lg:py-28 bg-[#f8fafc] text-slate-900 overflow-hidden border-b border-slate-200/80">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           label="Tailored Strategy"
@@ -36,7 +36,7 @@ export function IndustriesServedSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px 100px 0px" }}
                 transition={{ duration: 0.45, delay: idx * 0.04, ease: [0.16, 1, 0.3, 1] }}
-                className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:border-primary/40 hover:shadow-md transform-gpu transition-colors duration-300 flex flex-col justify-between"
+                className="group rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm hover:border-primary/40 hover:shadow-md transform-gpu transition-colors duration-300 flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between">

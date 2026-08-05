@@ -57,7 +57,7 @@ const TIMELINE_STEPS = [
 
 export function GrowthSolutionTimeline() {
   return (
-    <section id="solution-timeline" className="relative py-20 lg:py-28 bg-white text-slate-900 overflow-hidden border-b border-slate-200/80">
+    <section id="solution-timeline" className="relative py-20 lg:py-28 bg-[#f8fafc] text-slate-900 overflow-hidden border-b border-slate-200/80">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 relative z-10">
         <SectionHeading
           label="The Blueprint"
@@ -79,7 +79,7 @@ export function GrowthSolutionTimeline() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px 100px 0px" }}
                 transition={{ duration: 0.45, delay: idx * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                className="rounded-2xl border border-slate-200 bg-slate-50 p-6 shadow-sm hover:border-primary/40 hover:shadow-md transform-gpu transition-colors duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
+                className="rounded-2xl border border-slate-200/90 bg-white p-6 shadow-sm hover:border-primary/40 hover:shadow-md transform-gpu transition-colors duration-300 flex flex-col sm:flex-row sm:items-center justify-between gap-4"
               >
                 <div className="flex items-start gap-4">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-primary border border-blue-200 font-mono font-extrabold text-sm">
@@ -101,7 +101,7 @@ export function GrowthSolutionTimeline() {
                   </div>
                 </div>
 
-                <div className="flex flex-wrap sm:flex-col gap-1.5 pt-3 sm:pt-0 border-t sm:border-t-0 border-slate-200 shrink-0">
+                <div className="flex flex-wrap sm:flex-col gap-1.5 pt-3 sm:pt-0 border-t sm:border-t-0 border-slate-100 shrink-0">
                   {step.keyActions.map((act) => (
                     <span key={act} className="inline-flex items-center gap-1 text-[11px] text-slate-600 font-mono font-medium">
                       <CheckCircle2 className="h-3 w-3 text-emerald-500" /> {act}

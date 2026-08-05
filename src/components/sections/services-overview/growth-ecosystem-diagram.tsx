@@ -28,7 +28,7 @@ const ECOSYSTEM_BLOCKS = [
 
 export function GrowthEcosystemDiagram() {
   return (
-    <section id="ecosystem" className="relative py-20 lg:py-28 bg-slate-50 text-slate-900 overflow-hidden border-b border-slate-200/80">
+    <section id="ecosystem" className="relative py-20 lg:py-28 bg-[#f8fafc] text-slate-900 overflow-hidden border-b border-slate-200/80">
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           label="Interlocking Capabilities"
@@ -38,7 +38,7 @@ export function GrowthEcosystemDiagram() {
           tone="light"
         />
 
-        {/* Minimal White Grid */}
+        {/* Unified Soft Slate Ice Grid */}
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {ECOSYSTEM_BLOCKS.map((block, idx) => {
             const Icon = block.icon
@@ -49,7 +49,7 @@ export function GrowthEcosystemDiagram() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px 100px 0px" }}
                 transition={{ duration: 0.45, delay: idx * 0.04, ease: [0.16, 1, 0.3, 1] }}
-                className="group rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:border-primary/40 hover:shadow-md transform-gpu transition-colors duration-300"
+                className="group rounded-2xl border border-slate-200/90 bg-white p-5 shadow-sm hover:border-primary/40 hover:shadow-md transform-gpu transition-colors duration-300"
               >
                 <div className="flex items-center justify-between text-[10px] font-mono text-slate-400">
                   <span>{block.category}</span>
