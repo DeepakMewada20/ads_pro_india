@@ -45,7 +45,7 @@ export function ServicesOverviewHero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-5 max-w-2xl mx-auto text-sm sm:text-base text-slate-300 leading-relaxed font-sans"
+            className="mt-5 max-w-2xl mx-auto text-base sm:text-lg text-slate-200 leading-relaxed font-sans"
           >
             We create complete digital growth systems that attract visitors, generate leads, convert customers, and help businesses scale.
           </motion.p>
@@ -56,10 +56,10 @@ export function ServicesOverviewHero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="mt-8 flex flex-wrap items-center justify-center gap-3"
           >
-            <AnimatedButton href="#ecosystem" variant="primary" className="py-2.5 px-6 text-xs gap-2">
-              Explore Ecosystem <ArrowRight className="h-3.5 w-3.5" />
+            <AnimatedButton href="#ecosystem" variant="primary" className="py-2.5 px-6 text-sm gap-2">
+              Explore Ecosystem <ArrowRight className="h-4 w-4" />
             </AnimatedButton>
-            <AnimatedButton href="#why-fail" variant="ghost" className="py-2.5 px-6 text-xs text-slate-300 border-white/10 hover:border-white/30">
+            <AnimatedButton href="#why-fail" variant="ghost" className="py-2.5 px-6 text-sm text-slate-300 border-white/10 hover:border-white/30">
               Why Agencies Fail
             </AnimatedButton>
           </motion.div>

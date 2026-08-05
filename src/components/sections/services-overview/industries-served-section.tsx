@@ -52,7 +52,7 @@ export function IndustriesServedSection() {
                     {ind.name}
                   </h3>
 
-                  <p className="mt-2 text-xs text-slate-600 leading-relaxed font-sans">
+                  <p className="mt-2 text-sm sm:text-base text-slate-600 leading-relaxed font-sans">
                     {ind.strategy}
                   </p>
                 </div>

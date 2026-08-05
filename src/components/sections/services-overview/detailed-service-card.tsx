@@ -72,11 +72,11 @@ export function DetailedServiceCard({ service, index }: DetailedServiceCardProps
             </div>
           </div>
 
-          <p className="mt-3 text-xs font-semibold text-blue-300/90">
+          <p className="mt-3 text-sm font-semibold text-blue-300/90">
             {service.tagline}
           </p>
 
-          <p className="mt-3 text-xs leading-relaxed text-slate-300 font-sans">
+          <p className="mt-3 text-sm sm:text-base leading-relaxed text-slate-300 font-sans">
             {service.overview}
           </p>
 
@@ -85,7 +85,7 @@ export function DetailedServiceCard({ service, index }: DetailedServiceCardProps
             {service.keySubtypes.map((sub) => (
               <span
                 key={sub}
-                className="rounded-lg border border-white/5 bg-slate-800/80 px-2.5 py-1 text-[11px] font-medium text-slate-300"
+                className="rounded-lg border border-white/5 bg-slate-800/80 px-2.5 py-1 text-xs font-medium text-slate-300"
               >
                 {sub}
               </span>
@@ -102,8 +102,8 @@ export function DetailedServiceCard({ service, index }: DetailedServiceCardProps
             </h4>
             <ul className="space-y-2">
               {service.deliverables.map((d) => (
-                <li key={d} className="flex items-start gap-2 text-xs text-slate-300 font-sans">
-                  <span className="h-1 w-1 rounded-full bg-blue-400 mt-1.5 shrink-0" />
+                <li key={d} className="flex items-start gap-2 text-sm text-slate-300 font-sans">
+                  <span className="h-1.5 w-1.5 rounded-full bg-blue-400 mt-2 shrink-0" />
                   <span>{d}</span>
                 </li>
               ))}

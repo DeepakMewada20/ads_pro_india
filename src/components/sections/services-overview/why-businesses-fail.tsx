@@ -74,17 +74,17 @@ export function WhyBusinessesFail() {
                 {card.title}
               </h3>
 
-              <div className="mt-4 rounded-xl bg-slate-950/60 p-3.5 border border-white/5 text-xs text-slate-400">
-                <div className="text-[11px] font-bold text-slate-400 mb-1 flex items-center gap-1.5 font-mono">
-                  <ShieldAlert className="h-3.5 w-3.5 text-amber-500" />
+              <div className="mt-4 rounded-xl bg-slate-950/60 p-4 border border-white/5 text-sm sm:text-base text-slate-300">
+                <div className="text-xs sm:text-sm font-bold text-slate-300 mb-1.5 flex items-center gap-1.5 font-mono">
+                  <ShieldAlert className="h-4 w-4 text-amber-500" />
                   The Problem:
                 </div>
                 <p>{card.problem}</p>
               </div>
 
-              <div className="mt-3 rounded-xl border border-blue-500/20 bg-blue-950/30 p-3.5 text-xs">
-                <div className="text-[11px] font-bold text-blue-400 mb-1 flex items-center gap-1.5 font-mono">
-                  <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400" />
+              <div className="mt-3 rounded-xl border border-blue-500/20 bg-blue-950/30 p-4 text-sm sm:text-base">
+                <div className="text-xs sm:text-sm font-bold text-blue-400 mb-1.5 flex items-center gap-1.5 font-mono">
+                  <CheckCircle2 className="h-4 w-4 text-emerald-400" />
                   Ads Pro System Solution:
                 </div>
                 <p className="text-slate-200">{card.systemFix}</p>

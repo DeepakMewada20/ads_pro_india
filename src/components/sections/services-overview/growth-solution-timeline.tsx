@@ -95,7 +95,7 @@ export function GrowthSolutionTimeline() {
                       <Icon className="h-4.5 w-4.5 text-primary" />
                       {step.title}
                     </h3>
-                    <p className="mt-1 text-xs text-slate-600 font-sans max-w-xl">
+                    <p className="mt-1 text-sm sm:text-base text-slate-600 font-sans max-w-xl">
                       {step.description}
                     </p>
                   </div>
@@ -103,8 +103,8 @@ export function GrowthSolutionTimeline() {
 
                 <div className="flex flex-wrap sm:flex-col gap-1.5 pt-3 sm:pt-0 border-t sm:border-t-0 border-slate-100 shrink-0">
                   {step.keyActions.map((act) => (
-                    <span key={act} className="inline-flex items-center gap-1 text-[11px] text-slate-600 font-mono font-medium">
-                      <CheckCircle2 className="h-3 w-3 text-emerald-500" /> {act}
+                    <span key={act} className="inline-flex items-center gap-1 text-xs sm:text-sm text-slate-700 font-mono font-medium">
+                      <CheckCircle2 className="h-3.5 w-3.5 text-emerald-500" /> {act}
                     </span>
                   ))}
                 </div>
